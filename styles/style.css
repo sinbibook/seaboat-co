@@ -1877,6 +1877,28 @@ html[data-social='on'] .header .hd_sns {
   .main_sld_list .txt_box .btn_more:after {
     display: none;
   }
+  /* ⚠️ **글 띠를 카드 바닥에 붙인다.** 원본은 `top: calc(100% - 75px)` 로 띠 높이를
+     부제 `<p>` 까지 든 75px 로 가정하는데, 템플릿은 부제가 비면 `<p>` 를 만들지 않아
+     띠가 짧아지고 그 차이(약 20px)만큼 바닥에서 떠 보였다. */
+  .main_sld_list .txt_box,
+  .main_sld_list .swiper-slide:hover .txt_box {
+    top: auto;
+    bottom: 0;
+  }
+  /* 시설 카드 — 터치 기기에는 hover 가 없으므로 VIEW MORE 를 늘 보인다 */
+  .special_list .txt_box > div {
+    padding: 12px 0 14px;
+  }
+  .special_list .txt_box .btn_more,
+  .special_list .swiper-slide:hover .txt_box .btn_more {
+    display: inline-block;
+    opacity: 1;
+    visibility: visible;
+    font-size: 11px;
+    line-height: 2.6;
+    margin-top: 0.6em;
+    transition: none;
+  }
 
   /* main_room */
   .room_ico .ico01 {
