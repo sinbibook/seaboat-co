@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>강화 친환경 바다배 범선 키즈 펜션 - 오시는길</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="강화 친환경 바다배 범선 키즈 펜션 - 오시는길" />
+  <meta property="og:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta property="og:url" content="https://seaboat.co.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="강화 친환경 바다배 범선 키즈 펜션 - 오시는길" />
+  <meta name="twitter:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta name="naver-site-verification" content="9d290825fe6490b24735b54dd6b5024bc7d56983" />
+  <meta name="google-site-verification" content="Qb5Ib5THyVQj2J-zVLVYGZ_0mex_519ZtFmyVo-gaUQ" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <section id="content" class="sub6_1 sub_traffic">
+          <div class="sub_visual_wide" data-directions-hero-bg>
+            <div class="visual_box">
+              <div class="visual_txt">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                  <strong data-directions-hero-title></strong>
+                  <p data-directions-hero-description></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--// sub_visual_wide -->
+
+          <!-- prettier-ignore -->
+          <div class="sub_cont" style="background:url('images/common/main_about_bg.webp') repeat-y 50% 0;background-size:cover;">
+            <div class="map_wrap inner">
+              <div class="title_box">
+                <em>LOCATION</em>
+                <h3 data-aos="fade-up" data-directions-title></h3>
+              </div>
+              <div class="map_box">
+                <div class="map_inner">
+                  <!-- ⚠️ 원본은 다음 「지도 퍼가기」 위젯(`root_daum_roughmap`)이라
+                       사이트별 key 가 마크업에 박혀 있다. 템플릿은 좌표로 그리는
+                       Kakao SDK 로 바꿨다(js/kakao-maps-sdk.js). -->
+                  <div id="kakao-map"></div>
+                </div>
+              </div>
+
+              <!-- ⚠️ 아이콘 3개가 줄 순서에 고정돼 있다(주소 / 네비게이션 / 대중교통).
+                   줄을 늘리거나 줄이면 아이콘 짝이 어긋나므로 3줄 고정으로 둔다. -->
+              <!-- prettier-ignore -->
+              <dl style="background-image:url('images/common/ico_traffic_address.png');" data-aos="fade-up">
+                <dt>주소</dt>
+                <dd data-directions-address></dd>
+              </dl>
+              <!-- prettier-ignore -->
+              <dl style="background-image:url('images/common/ico_traffic_car.png');" data-aos="fade-up" data-aos-delay="100">
+                <dt>네비게이션 이용시</dt>
+                <dd data-directions-navigation></dd>
+              </dl>
+              <!-- prettier-ignore -->
+              <dl style="background-image:url('images/common/ico_traffic_bus.png');" data-aos="fade-up" data-aos-delay="200" data-directions-transit-row>
+                <dt data-directions-transit-title>대중교통 이용시</dt>
+                <dd data-directions-transit></dd>
+              </dl>
+            </div>
+          </div>
+          <!--// sub_cont -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/kakao-maps-sdk.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/directions-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/directions.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

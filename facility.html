@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>강화 친환경 바다배 범선 키즈 펜션 - 시설안내</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="강화 친환경 바다배 범선 키즈 펜션 - 시설안내" />
+  <meta property="og:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta property="og:url" content="https://seaboat.co.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="강화 친환경 바다배 범선 키즈 펜션 - 시설안내" />
+  <meta name="twitter:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta name="naver-site-verification" content="9d290825fe6490b24735b54dd6b5024bc7d56983" />
+  <meta name="google-site-verification" content="Qb5Ib5THyVQj2J-zVLVYGZ_0mex_519ZtFmyVo-gaUQ" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <!-- 원본 `special1~9.html` 이다 — 시설마다 한 장씩 있는 상세 페이지라
+             `facility.html?id=` 구조가 원본과 그대로 맞는다. -->
+        <section id="content" class="sub3_1 sub_special">
+          <!-- ⚠️ 원본은 여기 `.visual_txt` 도 주석 처리해 뒀다. 살려 둔다. -->
+          <div class="sub_visual visual">
+            <div class="visual_box">
+              <div class="visual_txt">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                  <strong data-facility-hero-title></strong>
+                  <p data-facility-hero-description></p>
+                  <div class="paging swiper-pagination"></div>
+                  <div class="btn_play">
+                    <!-- prettier-ignore -->
+                    <span id="play" style="background:url('images/common/ico_btn_play.png') no-repeat 0 0;background-size:auto 70%;">play</span>
+                    <!-- prettier-ignore -->
+                    <span id="stop" style="background:url('images/common/ico_btn_pause.png') no-repeat 0 0;background-size:auto 70%;">stop</span>
+                  </div>
+                </div>
+              </div>
+              <div class="arw">
+                <!-- prettier-ignore -->
+                <div class="swiper-button-prev"><span style="background-image:url('images/common/main_visual_prev.png');"></span></div>
+                <!-- prettier-ignore -->
+                <div class="swiper-button-next"><span style="background-image:url('images/common/main_visual_next.png');"></span></div>
+              </div>
+              <div class="swiper-container">
+                <!-- data-* : data-facility-hero-slides -->
+                <div class="swiper-wrapper" data-facility-hero-slides></div>
+              </div>
+              <div class="scroll_down">
+                <img src="images/common/ico_scroll.png" alt="scroll down" />
+                <span>SCROLL DOWN</span>
+              </div>
+            </div>
+          </div>
+          <!--// sub_visual -->
+
+          <!-- ── 시설 탭 ───────────────────────────────────
+               data-* : data-facility-tabs (property.facilities[] 동적 생성) -->
+          <div class="sub_cate_wrap">
+            <div class="sub_inner">
+              <ul data-facility-tabs></ul>
+            </div>
+          </div>
+
+          <!-- prettier-ignore -->
+          <div class="sub_cont" style="background:url('images/common/main_about_bg.webp') repeat-y 50% 0;background-size:cover;">
+            <div class="title_box">
+              <em data-aos="fade-up" data-facility-index></em>
+              <h3 data-aos="fade-up" data-aos-delay="100" data-facility-name></h3>
+              <p class="sub_title" data-aos="fade-up" data-aos-delay="200" data-facility-subtitle></p>
+              <p class="sub_txt2" data-aos="fade-up" data-aos-delay="300" data-facility-description></p>
+              <div class="btn_wrap" data-aos="fade-up" data-aos-delay="400">
+                <a href="#!" target="_blank" class="btn_reserve" data-booking-link>RESERVE NOW</a>
+              </div>
+            </div>
+
+            <div class="inner">
+              <!-- data-* : data-facility-gallery (facility.images 앞 2장 — 2칸 고정) -->
+              <ul class="special_img" data-facility-gallery></ul>
+            </div>
+
+            <!-- data-* : data-facility-wide-image (facility.images[2]) -->
+            <div class="wide_img" data-facility-wide-image></div>
+
+          <!-- prettier-ignore -->
+          <div class="main_special main_sld" style="background:url('images/common/main_special_bg.webp') no-repeat 100% 0 #fff;background-size:cover;">
+            <div class="inner">
+              <div class="title_box">
+                <h3 data-aos="fade-up" data-aos-duration="1000" data-special-preview-title></h3>
+                <p
+                  class="sub_title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                  data-property-caption="{name} 스페셜 안내"
+                ></p>
+              </div>
+              <div class="special_list main_sld_list">
+                <div class="arw">
+                  <!-- prettier-ignore -->
+                  <div class="swiper-button-prev"><img src="images/common/room_prev.png" alt="이전" /></div>
+                  <!-- prettier-ignore -->
+                  <div class="swiper-button-next"><img src="images/common/room_next.png" alt="다음" /></div>
+                </div>
+                <div class="swiper-container">
+                  <!-- data-* : data-special-preview-list (property.facilities[] → 카드) -->
+                  <div class="swiper-wrapper" data-special-preview-list></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="special_ico">
+              <!-- prettier-ignore -->
+              <div class="ico01" style="background:url('images/common/main_special_ico01.png') no-repeat 50%;background-size:auto 100%;">파란 비행기 아이콘</div>
+            </div>
+          </div>
+          <!--// main_special -->
+          </div>
+          <!--// sub_cont -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/facility-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/facility.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

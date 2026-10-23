@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>강화 친환경 바다배 범선 키즈 펜션 - 예약안내</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="강화 친환경 바다배 범선 키즈 펜션 - 예약안내" />
+  <meta property="og:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta property="og:url" content="https://seaboat.co.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="강화 친환경 바다배 범선 키즈 펜션 - 예약안내" />
+  <meta name="twitter:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta name="naver-site-verification" content="9d290825fe6490b24735b54dd6b5024bc7d56983" />
+  <meta name="google-site-verification" content="Qb5Ib5THyVQj2J-zVLVYGZ_0mex_519ZtFmyVo-gaUQ" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <section id="content" class="sub4_1 sub_reserve">
+          <div class="sub_visual_wide" data-reservation-hero-bg>
+            <div class="visual_box">
+              <div class="visual_txt">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                  <strong data-reservation-hero-title></strong>
+                  <p data-reservation-hero-description></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--// sub_visual_wide -->
+
+          <!-- 원본 서브 탭 — 「예약하기」(실시간예약 새 창) / 「이용안내」(이 페이지) -->
+          <div class="sub_cate_wrap">
+            <div class="sub_inner">
+              <ul>
+                <li><a href="#!" target="_blank" data-booking-link>예약하기</a></li>
+                <li class="on"><a href="./reservation.html">이용안내</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- prettier-ignore -->
+          <div class="sub_cont" style="background:url('images/common/main_about_bg.webp') repeat-y 50% 0;background-size:cover;">
+            <!-- ⚠️ 원본은 `<dl class="info_box">` 안에 `dt`(제목) / `dd`(본문) 쌍을
+                 **평면으로** 늘어놓는다. `dd + dt` 에 위 여백이 붙으므로
+                 쌍을 `<div>` 로 감싸면 안 된다. 매퍼가 쌍 단위로 숨긴다. -->
+            <dl class="info_box" data-aos="fade-up">
+              <dt class="title_box" data-reservation-info-row>
+                <h3 data-reservation-info-title></h3>
+              </dt>
+              <dd data-reservation-info-row data-reservation-info-text></dd>
+
+              <dt class="title_box" data-reservation-refund-row>
+                <h3>환불안내</h3>
+              </dt>
+              <dd data-reservation-refund-row data-reservation-refund-text></dd>
+            </dl>
+          </div>
+          <!--// sub_cont -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/reservation-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/reservation.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

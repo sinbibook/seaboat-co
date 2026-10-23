@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>강화 친환경 바다배 범선 키즈 펜션</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="강화 친환경 바다배 범선 키즈 펜션" />
+  <meta property="og:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta property="og:url" content="https://seaboat.co.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="강화 친환경 바다배 범선 키즈 펜션" />
+  <meta name="twitter:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta name="naver-site-verification" content="9d290825fe6490b24735b54dd6b5024bc7d56983" />
+  <meta name="google-site-verification" content="Qb5Ib5THyVQj2J-zVLVYGZ_0mex_519ZtFmyVo-gaUQ" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <!-- 원본 `room.html` **목록**(메뉴 이름 「미리보기」)이다.
+             `room.html?room_id=` 상세는 `room.html` 이 받는다. -->
+        <section id="content" class="sub2_1 sub_room">
+          <!-- ── 히어로 ──────────────────────────────────────
+               ⚠️ **슬라이더가 아니다.** 원본은 `.sub_visual_wide` 에 배경 한 장을
+                  인라인으로 박는다 — `.swiper-container` 도 `.arw` 도 없다.
+                  (main / room 상세 / facility 의 `.sub_visual` 과 다른 구조다)
+               원본 문구는 `room preview` / `객실 미리보기` 다. -->
+          <div class="sub_visual_wide" data-layoutmap-hero-bg>
+            <div class="visual_box">
+              <div class="visual_txt">
+                <div data-aos="fade-up">
+                  <strong data-layoutmap-hero-title></strong>
+                  <p data-layoutmap-hero-description></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--// sub_visual_wide -->
+
+          <!-- ── 객실 탭 ───────────────────────────────────
+               첫 칸(「미리보기」)은 이 페이지 자신이라 정적으로 두고, 그 뒤에 객실을 만든다.
+               ⚠️ Swiper 가 아니라 `inline-block` 목록이다(`.sub_cate_wrap ul li`). -->
+          <div class="sub_cate_wrap">
+            <div class="sub_inner">
+              <!-- data-* : data-room-tabs (customFields.roomtypes[] 동적 생성) -->
+              <ul data-room-tabs>
+                <li class="on"><a href="./layout-map.html">미리보기</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- prettier-ignore -->
+          <div class="sub_cont">
+            <!-- ── 배치도 ────────────────────────────────────
+                 원본은 `.wide_img` 안에 제목 + 배치도 한 장을 넣는다.
+                 ⚠️ 배치도는 이 페이지의 본론이라 비어도 영역을 숨기지 않고
+                    placeholder 를 세워 매핑 위치를 보여 준다. -->
+            <div class="wide_img">
+              <div class="title_box">
+                <h3 class="ff_jua" data-aos="fade-up" data-layoutmap-title></h3>
+                <p
+                  class="sub_title"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  data-layoutmap-description
+                ></p>
+              </div>
+              <!-- data-* : data-layoutmap-images (about.images[isSelected] → <img>) -->
+              <div data-layoutmap-images></div>
+            </div>
+
+          <!-- prettier-ignore -->
+          <div class="main_room main_sld" style="background:url('images/common/main_room_bg.webp') no-repeat 100% 0 #fff;background-size:cover;">
+            <div class="inner">
+              <div class="title_box">
+                <h3 data-aos="fade-up" data-aos-duration="1000" data-room-preview-title></h3>
+                <p
+                  class="sub_title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                  data-property-caption="{name} 객실 안내"
+                ></p>
+              </div>
+              <div class="room_list main_sld_list">
+                <!-- prettier-ignore -->
+                <div class="ico01" style="background:url('images/common/room_ico01.png') no-repeat 50%;background-size:auto 100%;">라인 아이콘</div>
+                <!-- prettier-ignore -->
+                <div class="ico02" style="background:url('images/common/room_ico02.png') no-repeat 50%;background-size:auto 100%;">라인 아이콘</div>
+                <div class="arw">
+                  <!-- prettier-ignore -->
+                  <div class="swiper-button-prev"><img src="images/common/room_prev.png" alt="이전" /></div>
+                  <!-- prettier-ignore -->
+                  <div class="swiper-button-next"><img src="images/common/room_next.png" alt="다음" /></div>
+                </div>
+                <div class="swiper-container">
+                  <!-- data-* : data-room-preview-list (customFields.roomtypes[] → 카드) -->
+                  <div class="swiper-wrapper" data-room-preview-list></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="room_ico">
+              <!-- prettier-ignore -->
+              <div class="ico01" style="background:url('images/common/main_landscape_ico04.png') no-repeat right;background-size:auto 100%;">원 아이콘</div>
+              <!-- prettier-ignore -->
+              <div class="ico02" style="background:url('images/common/main_landscape_ico03.png') no-repeat 50%;background-size:auto 100%;">노란 비행기 아이콘</div>
+            </div>
+          </div>
+          <!--// main_room -->
+          </div>
+          <!--// sub_cont -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/layout-map-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/layout-map.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

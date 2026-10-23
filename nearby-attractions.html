@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>강화 친환경 바다배 범선 키즈 펜션</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="강화 친환경 바다배 범선 키즈 펜션" />
+  <meta property="og:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta property="og:url" content="https://seaboat.co.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="강화 친환경 바다배 범선 키즈 펜션" />
+  <meta name="twitter:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta name="naver-site-verification" content="9d290825fe6490b24735b54dd6b5024bc7d56983" />
+  <meta name="google-site-verification" content="Qb5Ib5THyVQj2J-zVLVYGZ_0mex_519ZtFmyVo-gaUQ" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <section id="content" class="sub6_1 sub_travel">
+          <div class="sub_visual_wide" data-travel-hero-bg>
+            <div class="visual_box">
+              <div class="visual_txt">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                  <strong data-travel-hero-title></strong>
+                  <p data-travel-hero-description></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--// sub_visual_wide -->
+
+          <!-- prettier-ignore -->
+          <div class="sub_cont" style="background:url('images/common/main_about_bg.webp') repeat-y 50% 0;background-size:cover;">
+            <div class="title_box">
+              <em data-aos="fade-up">TRAVEL</em>
+              <h3 data-aos="fade-up" data-aos-delay="100" data-travel-title></h3>
+            </div>
+            <!-- data-* : data-travel-list (pages.nearbyAttractions.sections[0].about[]) -->
+            <ul class="travel_list inner" data-travel-list></ul>
+          </div>
+          <!--// sub_cont -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/nearby-attractions-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/nearby-attractions.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

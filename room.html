@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>강화 친환경 바다배 범선 키즈 펜션 - 객실안내</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="강화 친환경 바다배 범선 키즈 펜션 - 객실안내" />
+  <meta property="og:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta property="og:url" content="https://seaboat.co.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="강화 친환경 바다배 범선 키즈 펜션 - 객실안내" />
+  <meta name="twitter:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta name="naver-site-verification" content="9d290825fe6490b24735b54dd6b5024bc7d56983" />
+  <meta name="google-site-verification" content="Qb5Ib5THyVQj2J-zVLVYGZ_0mex_519ZtFmyVo-gaUQ" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <!-- 원본 `room.html?room_id=` 상세다. 목록은 `layout-map.html` 이 받는다. -->
+        <section id="content" class="sub2_2 sub_room sub_room_detail">
+          <!-- ⚠️ 원본은 이 히어로의 `.visual_txt` 를 **주석 처리**해 뒀다(사진만 돈다).
+               템플릿은 살려 둔다 — 객실명이 없으면 매퍼가 문구째 숨긴다. -->
+          <div class="sub_visual visual">
+            <div class="visual_box">
+              <div class="visual_txt">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                  <strong data-room-hero-title></strong>
+                  <p data-room-hero-description></p>
+                  <div class="paging swiper-pagination"></div>
+                  <div class="btn_play">
+                    <!-- prettier-ignore -->
+                    <span id="play" style="background:url('images/common/ico_btn_play.png') no-repeat 0 0;background-size:auto 70%;">play</span>
+                    <!-- prettier-ignore -->
+                    <span id="stop" style="background:url('images/common/ico_btn_pause.png') no-repeat 0 0;background-size:auto 70%;">stop</span>
+                  </div>
+                </div>
+              </div>
+              <div class="arw">
+                <!-- prettier-ignore -->
+                <div class="swiper-button-prev"><span style="background-image:url('images/common/main_visual_prev.png');"></span></div>
+                <!-- prettier-ignore -->
+                <div class="swiper-button-next"><span style="background-image:url('images/common/main_visual_next.png');"></span></div>
+              </div>
+              <div class="swiper-container">
+                <!-- data-* : data-room-hero-slides -->
+                <div class="swiper-wrapper" data-room-hero-slides></div>
+              </div>
+              <div class="scroll_down">
+                <img src="images/common/ico_scroll.png" alt="scroll down" />
+                <span>SCROLL DOWN</span>
+              </div>
+            </div>
+          </div>
+          <!--// sub_visual -->
+
+          <!-- ── 객실 탭 ───────────────────────────────────
+               첫 칸은 목록(layout-map)으로 가는 링크다. 미리보기가 꺼져 있으면 숨긴다. -->
+          <div class="sub_cate_wrap">
+            <div class="sub_inner">
+              <!-- data-* : data-room-tabs -->
+              <ul data-room-tabs>
+                <li><a href="./layout-map.html">미리보기</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- prettier-ignore -->
+          <div class="sub_cont" style="background:url('images/common/main_about_bg.webp') repeat-y 50% 0;background-size:cover;">
+            <div class="title_box">
+              <em data-aos="fade-up" data-room-index></em>
+              <h3 data-aos="fade-up" data-aos-delay="100" data-room-name></h3>
+              <p class="sub_txt" data-aos="fade-up" data-aos-delay="200" data-room-description></p>
+              <div class="btn_wrap" data-aos="fade-up" data-aos-delay="300">
+                <!-- data-* : data-booking-link -->
+                <a href="#!" target="_blank" class="btn_reserve" data-booking-link>RESERVE NOW</a>
+              </div>
+            </div>
+
+            <div class="inner">
+              <!-- data-* : data-room-gallery (roomtype_interior 앞 3장 — 3칸 고정) -->
+              <ul class="room_img" data-room-gallery></ul>
+            </div>
+
+            <div class="table_box inner">
+              <!-- ── 객실 정보 표 ─────────────────────────
+                   원본은 PC/모바일 표를 **따로** 둔다(`.for_pc` / `.for_m`).
+                   열 구성이 달라 하나로 합칠 수 없다 — 모바일은 「평형」 열이 없고
+                   객실명·유형을 `colspan=2` 로 늘린다. 매퍼가 둘 다 채운다. -->
+              <div class="price_table for_pc">
+                <table cellspacing="0" cellpadding="0" class="table_default">
+                  <thead>
+                    <tr>
+                      <th style="width: 20%">객실명</th>
+                      <th style="width: 5%">기준</th>
+                      <th style="width: 5%">최대</th>
+                      <th style="width: 15%">유형</th>
+                      <th style="width: 15%">평형</th>
+                    </tr>
+                  </thead>
+                  <!-- data-* : data-room-table-pc -->
+                  <tbody data-room-table-pc></tbody>
+                </table>
+                <!-- data-* : data-room-amenities (rooms[].amenities → 집기품목) -->
+                <ul class="table_text" data-room-amenities></ul>
+              </div>
+
+              <div class="price_table for_m">
+                <table cellspacing="0" cellpadding="0" class="table_default">
+                  <thead>
+                    <tr>
+                      <th colspan="2">객실명</th>
+                      <th>기준</th>
+                      <th>최대</th>
+                      <th colspan="2">유형</th>
+                    </tr>
+                  </thead>
+                  <!-- data-* : data-room-table-m -->
+                  <tbody data-room-table-m></tbody>
+                </table>
+                <ul class="table_text" data-room-amenities></ul>
+              </div>
+
+              <div class="btn_wrap">
+                <a href="#!" target="_blank" class="btn_reserve" data-booking-link>RESERVE NOW</a>
+              </div>
+            </div>
+
+            <!-- ── 객실 평면도 ───────────────────────────────
+                 ⚠️ **원본에는 이 영역이 없다.** 원본 배치도는 목록 페이지의 사이트 공통
+                    한 장뿐이다. 백오피스가 객실별 `roomtype_floorplan` 을 내려주므로
+                    다른 템플릿과 같이 표준 슬롯으로 둔다.
+                 ⚠️ **제목 없이 이미지 영역만** 둔다.
+                 ⚠️ 평면도가 **없으면 영역째 숨긴다**(배치도와 반대다 — 평면도는 부가
+                    정보라 없어도 페이지가 성립한다).
+                 ⚠️ **객실당 한 장만** 둔다. 일반 객실 사진으로 폴백하지 않는다 —
+                    평면도 자리에 인테리어 사진이 들어가면 잘못된 정보다. -->
+            <!-- data-* : data-room-floorplan (roomtype_floorplan 계열 카테고리 1장) -->
+            <div class="room_floorplan" data-room-floorplan></div>
+
+            <!-- data-* : data-room-wide-image (roomtype_exterior → 없으면 interior 마지막 장) -->
+            <div class="wide_img" data-room-wide-image></div>
+
+          <!-- prettier-ignore -->
+          <div class="main_room main_sld" style="background:url('images/common/main_room_bg.webp') no-repeat 100% 0 #fff;background-size:cover;">
+            <div class="inner">
+              <div class="title_box">
+                <h3 data-aos="fade-up" data-aos-duration="1000" data-room-preview-title></h3>
+                <p
+                  class="sub_title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                  data-property-caption="{name} 객실 안내"
+                ></p>
+              </div>
+              <div class="room_list main_sld_list">
+                <!-- prettier-ignore -->
+                <div class="ico01" style="background:url('images/common/room_ico01.png') no-repeat 50%;background-size:auto 100%;">라인 아이콘</div>
+                <!-- prettier-ignore -->
+                <div class="ico02" style="background:url('images/common/room_ico02.png') no-repeat 50%;background-size:auto 100%;">라인 아이콘</div>
+                <div class="arw">
+                  <!-- prettier-ignore -->
+                  <div class="swiper-button-prev"><img src="images/common/room_prev.png" alt="이전" /></div>
+                  <!-- prettier-ignore -->
+                  <div class="swiper-button-next"><img src="images/common/room_next.png" alt="다음" /></div>
+                </div>
+                <div class="swiper-container">
+                  <!-- data-* : data-room-preview-list (customFields.roomtypes[] → 카드) -->
+                  <div class="swiper-wrapper" data-room-preview-list></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="room_ico">
+              <!-- prettier-ignore -->
+              <div class="ico01" style="background:url('images/common/main_landscape_ico04.png') no-repeat right;background-size:auto 100%;">원 아이콘</div>
+              <!-- prettier-ignore -->
+              <div class="ico02" style="background:url('images/common/main_landscape_ico03.png') no-repeat 50%;background-size:auto 100%;">노란 비행기 아이콘</div>
+            </div>
+          </div>
+          <!--// main_room -->
+          </div>
+          <!--// sub_cont -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/room-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/room.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

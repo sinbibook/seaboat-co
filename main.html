@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>강화 친환경 바다배 범선 키즈 펜션 - 숙소소개</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="강화 친환경 바다배 범선 키즈 펜션 - 숙소소개" />
+  <meta property="og:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta property="og:url" content="https://seaboat.co.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="강화 친환경 바다배 범선 키즈 펜션 - 숙소소개" />
+  <meta name="twitter:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta name="naver-site-verification" content="9d290825fe6490b24735b54dd6b5024bc7d56983" />
+  <meta name="google-site-verification" content="Qb5Ib5THyVQj2J-zVLVYGZ_0mex_519ZtFmyVo-gaUQ" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <!-- 원본 `about.html`(펜션소개) + `view.html`(외경보기) **합본**이다.
+             템플릿 페이지 파일명이 고정이라 외경 전용 슬롯이 없어서 한 장에 합쳤고,
+             메뉴 이름은 「펜션소개」 하나만 남겼다.
+
+             원본 대비 바뀐 점
+             - 원본 서브 탭(`.sub_cate_wrap` — 펜션소개 / 외경보기)은 뺐다. 한 장이 됐으므로
+               탭이 자기 자신 둘로 갈리는 꼴이 된다.
+             - 소개 본문(`.main_about`)은 index 와 **완전히 같은 마크업**이다. 원본도
+               같은 조각을 두 페이지에 그대로 심는다. 데이터도 같은 블록(essence)을 쓴다. -->
+        <section id="content" class="sub1_1 sub_about">
+          <div class="sub_visual visual">
+            <div class="visual_box">
+              <div class="visual_txt">
+                <div data-aos="fade-up" data-aos-duration="1000">
+                  <strong data-main-hero-title></strong>
+                  <p data-main-hero-description></p>
+                  <div class="paging swiper-pagination"></div>
+                  <div class="btn_play">
+                    <!-- prettier-ignore -->
+                    <span id="play" style="background:url('images/common/ico_btn_play.png') no-repeat 0 0;background-size:auto 70%;">play</span>
+                    <!-- prettier-ignore -->
+                    <span id="stop" style="background:url('images/common/ico_btn_pause.png') no-repeat 0 0;background-size:auto 70%;">stop</span>
+                  </div>
+                </div>
+              </div>
+              <div class="arw">
+                <!-- prettier-ignore -->
+                <div class="swiper-button-prev"><span style="background-image:url('images/common/main_visual_prev.png');"></span></div>
+                <!-- prettier-ignore -->
+                <div class="swiper-button-next"><span style="background-image:url('images/common/main_visual_next.png');"></span></div>
+              </div>
+              <div class="swiper-container">
+                <!-- data-* : data-main-hero-slides -->
+                <div class="swiper-wrapper" data-main-hero-slides></div>
+              </div>
+              <div class="scroll_down">
+                <img src="images/common/ico_scroll.png" alt="scroll down" />
+                <span>SCROLL DOWN</span>
+              </div>
+            </div>
+          </div>
+          <!--// sub_visual -->
+
+          <!-- prettier-ignore -->
+          <div class="sub_cont">
+            <!-- ── 펜션 소개 (원본 about.html `.main_about`) ──
+                 ⚠️ **`about[]` 길이만큼 `.main_about` 을 복제한다.** 원본은 한 장짜리
+                    페이지라 블록이 하나뿐이지만, 백오피스는 배열로 내려준다.
+                    블록 하나 = 제목 + 본문 + 큰 사진 1장 + 가로 그리드(최대 4칸).
+                 ⚠️ 이미지 배정은 **`images[0]` = 큰 사진, `images[1..4]` = 그리드** 다
+                    (사용자 판단 2026-09-15). 1장뿐이면 큰 사진만 나오고 그리드는 만들지 않는다.
+                 ⚠️ 그리드 칸 폭은 **장수에 따라 동적**이다 — `ul[data-cols]` 참고.
+                    1장일 때만 원본 그대로 25% 를 유지한다(한 칸이 100% 로 부풀지 않도록).
+                 마크업은 매퍼가 만든다 — `js/data-mapper/pages/main-mapper.js` 의 buildAboutBlock() -->
+            <!-- data-* : data-main-about-blocks (pages.main.sections[0].about[]) -->
+            <div data-main-about-blocks></div>
+
+            <!-- ── 외경 (원본 view.html) ─────────────────────
+                 제목 + 가로 3칸 사진 + 와이드 사진 한 장.
+                 ⚠️ `.landscape_img li` 는 3칸 고정이다.
+                 ⚠️ 사진이 한 장도 없으면 제목만 남으므로 구간째 숨긴다. -->
+            <div data-main-view-section>
+              <div class="title_box">
+                <h3 class="ff_jua" data-aos="fade-up" data-main-view-title></h3>
+                <p
+                  class="sub_title"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  data-property-caption="{name}의 주변 풍경을 확인해 보세요."
+                ></p>
+              </div>
+              <div class="inner">
+                <!-- data-* : data-main-view-list (property.images[0].exterior 앞 3장) -->
+                <ul class="landscape_img" data-main-view-list></ul>
+              </div>
+            </div>
+
+            <!-- ── 와이드 사진 ───────────────────────────────
+                 data-* : data-main-wide-image (외경 4번째 장 → 없으면 구간째 숨김) -->
+            <div class="wide_img" data-main-wide-image></div>
+          </div>
+          <!--// sub_cont -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/main-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/main.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

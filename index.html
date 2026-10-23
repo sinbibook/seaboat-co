@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      html.tpl-loading body {
+        opacity: 0;
+      }
+      body {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('tpl-loading');
+      window.__tplReveal = function () {
+        document.documentElement.classList.remove('tpl-loading');
+      };
+      setTimeout(function () {
+        window.__tplReveal && window.__tplReveal();
+      }, 3000);
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:type" content="website" />
+    <title data-page-title>강화 친환경 바다배 범선 키즈 펜션 - 홈</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" type="text/css" href="styles/theme.css" />
+    <link rel="stylesheet" type="text/css" href="styles/reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/popup.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <!-- Open Graph Meta Tags for Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="강화 친환경 바다배 범선 키즈 펜션 - 홈" />
+  <meta property="og:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta property="og:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta property="og:url" content="https://seaboat.co.kr" />
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="강화 친환경 바다배 범선 키즈 펜션 - 홈" />
+  <meta name="twitter:description" content="국내유일 7000톤급 범선 테마를 가진 강화 친환경 바다배 범선 키즈 펜션 입니다. 사랑하는 사람들과 행복한 추억을 만들어보세요!" />
+  <meta name="twitter:image" content="https://bookingplay-media.s3.amazonaws.com/item_images/2026/07/20/2WgCVDBEcjNL.jpg" />
+  <meta name="naver-site-verification" content="9d290825fe6490b24735b54dd6b5024bc7d56983" />
+  <meta name="google-site-verification" content="Qb5Ib5THyVQj2J-zVLVYGZ_0mex_519ZtFmyVo-gaUQ" />
+</head>
+
+  <body oncontextmenu="return false;" onselectstart="return false" ondragstart="return false;">
+    <div id="wrap">
+      <div id="header-wrap"></div>
+
+      <div id="container">
+        <!-- ── 인트로 영상 밴드 ────────────────────────────
+             원본은 히어로 **위**에 `<video autoplay muted playsinline>` 한 장을
+             통째로 얹는다. `.vimeoWrap` 에는 CSS 규칙이 하나도 없어서
+             `<video width="100%">` 가 그대로 문서 흐름에 놓이는 밴드다.
+             ⚠️ **히어로가 아니라 `signature` 블록이다** — 히어로는 아래
+                `.main_visual` 슬라이더고 이건 별개 영역이다(t-template-F 와 같은 규약).
+             ⚠️ `mediaType` 이 `'video'` 일 때만 노출한다(image/video 택일).
+                두 원본 다 200MB 가 넘는 파일을 autoplay 로 건다. -->
+        <!-- data-* : data-index-hero-video-wrap / -video (signature.videos[0], mediaType==='video') -->
+        <div class="vimeoWrap" data-index-hero-video-wrap>
+          <video
+            data-index-hero-video
+            width="100%"
+            controls
+            autoplay
+            muted
+            playsinline
+            preload="none"
+          ></video>
+        </div>
+
+        <!-- ── 히어로 ──────────────────────────────────────
+             풀높이(100vh) 슬라이드 전환. 가운데 왼쪽 정렬 텍스트 블록에
+             `Welcome To`(민트 배지·11deg 기울임) / 영문 제목(보라 배지) / 설명 /
+             `01 / 20` 분수 페이지네이션 + 재생·정지 버튼이 한 덩어리로 들어간다.
+             ⚠️ `.paging` 과 `.btn_play` 는 `.visual_txt` **안**이어야 한다.
+                밖으로 빼면 `#wrap .visual .visual_txt .paging` 규칙이 안 먹어
+                분수가 화면 하단 중앙으로 튄다. -->
+        <div class="main_visual visual">
+          <div class="visual_box">
+            <div class="visual_txt">
+              <div data-aos="fade-up">
+                <span class="sub_txt" data-index-hero-eyebrow>Welcome To</span>
+                <br />
+                <strong data-index-hero-title></strong>
+                <p data-index-hero-description></p>
+                <div class="paging swiper-pagination"></div>
+                <div class="btn_play">
+                  <!-- prettier-ignore -->
+                  <span id="play" style="background:url('images/common/ico_btn_play.png') no-repeat 0 0;background-size:auto 70%;">play</span>
+                  <!-- prettier-ignore -->
+                  <span id="stop" style="background:url('images/common/ico_btn_pause.png') no-repeat 0 0;background-size:auto 70%;">stop</span>
+                </div>
+              </div>
+            </div>
+            <div class="arw">
+              <!-- prettier-ignore -->
+              <div class="swiper-button-prev"><span style="background-image:url('images/common/main_visual_prev.png');"></span></div>
+              <!-- prettier-ignore -->
+              <div class="swiper-button-next"><span style="background-image:url('images/common/main_visual_next.png');"></span></div>
+            </div>
+            <div class="swiper-container">
+              <!-- data-* : data-index-hero-slides (hero.images[isSelected] → 배경 div 슬라이드) -->
+              <div class="swiper-wrapper" data-index-hero-slides></div>
+            </div>
+            <div class="scroll_down">
+              <img src="images/common/ico_scroll.png" alt="scroll down" />
+              <span>SCROLL DOWN</span>
+            </div>
+          </div>
+        </div>
+        <!--// main_visual -->
+
+        <section id="content" class="main">
+          <!-- ── 펜션 소개 ───────────────────────────────────
+               좌측 정렬 제목(코랄) + 가로 4칸 사진 + 우측 큰 세로 사진.
+               `.bnr` 뒤에는 코랄 사각형(`:before`)이 30px 어긋나게 깔린다.
+               ⚠️ `ul li` 는 `width:calc(25% - 20px)` **4칸 고정**이다. -->
+          <!-- prettier-ignore -->
+          <div class="main_about" style="background:url('images/common/main_about_bg.webp') repeat-y 50% 0;background-size:cover;">
+            <div class="inner">
+              <div class="title_box">
+                <h3 data-aos="fade-up" data-aos-duration="1000" data-index-about-title></h3>
+                <p
+                  class="sub_title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                  data-index-about-description
+                ></p>
+              </div>
+              <div class="bnr_list">
+                <!-- prettier-ignore -->
+                <div class="ico" style="background:url('images/common/main_about_kids.png') no-repeat 50%;background-size:cover;">키즈 아이콘</div>
+                <!-- data-* : data-index-about-list (essence.images[isSelected] 앞 4장) -->
+                <ul data-index-about-list></ul>
+                <!-- data-* : data-index-about-image (essence.images[4] → 우측 큰 사진) -->
+                <div class="bnr"><div data-index-about-image></div></div>
+              </div>
+            </div>
+          </div>
+          <!--// main_about -->
+
+          <!-- ── 객실 미리보기 ───────────────────────────────
+               3열 카드 슬라이더. 카드는 hover 하면 `.img_box` 라운드가 펴지고
+               어두운 막이 올라오면서 `.txt_box` 가 가운데로 떠오른다.
+               ⚠️ `.arw` / `.swiper-pagination` 셀렉터 기준은 `.main_room` 이고
+                  슬라이더 컨테이너는 `.room_list` 안이다(원본 옵션 그대로). -->
+          <!-- prettier-ignore -->
+          <div class="main_room main_sld" style="background:url('images/common/main_room_bg.webp') no-repeat 100% 0 #fff;background-size:cover;">
+            <div class="inner">
+              <div class="title_box">
+                <h3 data-aos="fade-up" data-aos-duration="1000" data-index-room-title></h3>
+                <p
+                  class="sub_title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                  data-property-caption="{name} 객실 안내"
+                ></p>
+              </div>
+              <div class="room_list main_sld_list">
+                <!-- prettier-ignore -->
+                <div class="ico01" style="background:url('images/common/room_ico01.png') no-repeat 50%;background-size:auto 100%;">라인 아이콘</div>
+                <!-- prettier-ignore -->
+                <div class="ico02" style="background:url('images/common/room_ico02.png') no-repeat 50%;background-size:auto 100%;">라인 아이콘</div>
+                <!-- ⚠️ 원본에는 `.ico03` 이 하나 더 있지만 `url('')` 로 비어 있다(자리만 차지).
+                     빈 장식이라 싣지 않는다. -->
+                <div class="arw">
+                  <!-- prettier-ignore -->
+                  <div class="swiper-button-prev"><img src="images/common/room_prev.png" alt="이전" /></div>
+                  <!-- prettier-ignore -->
+                  <div class="swiper-button-next"><img src="images/common/room_next.png" alt="다음" /></div>
+                </div>
+                <div class="swiper-container">
+                  <!-- data-* : data-index-room-list (customFields.roomtypes[] → 카드) -->
+                  <div class="swiper-wrapper" data-index-room-list></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="room_ico">
+              <!-- prettier-ignore -->
+              <div class="ico01" style="background:url('images/common/main_landscape_ico04.png') no-repeat right;background-size:auto 100%;">원 아이콘</div>
+              <!-- prettier-ignore -->
+              <div class="ico02" style="background:url('images/common/main_landscape_ico03.png') no-repeat 50%;background-size:auto 100%;">노란 비행기 아이콘</div>
+            </div>
+          </div>
+          <!--// main_room -->
+
+          <!-- ── 주변 풍경 ───────────────────────────────────
+               우측 정렬 제목 + 가로 3칸 사진(우측) + 좌측 큰 사진.
+               ⚠️ `ul li` 는 `width:calc(33.3% - 20px)` **3칸 고정**이다. -->
+          <!-- prettier-ignore -->
+          <div class="main_landscape" data-index-landscape-section style="background:url('images/common/main_landscape_bg.webp') repeat-y 50% 0;background-size:cover;">
+            <div class="inner">
+              <div class="title_box">
+                <h3 data-aos="fade-up" data-index-landscape-title></h3>
+                <p
+                  class="sub_title"
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  data-index-landscape-description
+                ></p>
+              </div>
+              <div class="bnr_list">
+                <!-- data-* : data-index-landscape-list (gallery.images[isSelected] 앞 3장) -->
+                <ul data-aos="fade-left" data-aos-delay="100" data-index-landscape-list></ul>
+                <div class="bnr" data-aos="fade-right">
+                  <!-- prettier-ignore -->
+                  <div class="ico01" style="background:url('images/common/main_landscape_ico02.png') no-repeat 50%;background-size:auto 100%;">파란색 키즈 아이콘</div>
+                  <!-- data-* : data-index-landscape-image (gallery.images[3] → 좌측 큰 사진) -->
+                  <div data-index-landscape-image></div>
+                </div>
+              </div>
+              <div class="landscape_ico">
+                <!-- prettier-ignore -->
+                <div class="ico01" style="background:url('images/common/landscape_ico01.png') no-repeat 50%;background-size:auto 100%;">점선 아이콘</div>
+              </div>
+            </div>
+          </div>
+          <!--// main_landscape -->
+
+          <!-- ── 부대시설 미리보기 ───────────────────────────
+               객실과 같은 3열 카드 슬라이더다. 카드 제목은 시설 **영문명**,
+               부제가 한글명이다(객실 카드와 반대 순서가 아니다 — 원본 그대로).
+               시설이 하나도 없으면 섹션째 숨긴다. -->
+          <!-- prettier-ignore -->
+          <div class="main_special main_sld" data-index-special-section style="background:url('images/common/main_special_bg.webp') no-repeat 100% 0 #fff;background-size:cover;">
+            <div class="inner">
+              <div class="title_box">
+                <h3 data-aos="fade-up" data-aos-duration="1000" data-index-special-title></h3>
+                <p
+                  class="sub_title"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="100"
+                  data-index-special-description
+                ></p>
+              </div>
+              <div class="special_list main_sld_list">
+                <div class="arw">
+                  <!-- prettier-ignore -->
+                  <div class="swiper-button-prev"><img src="images/common/room_prev.png" alt="이전" /></div>
+                  <!-- prettier-ignore -->
+                  <div class="swiper-button-next"><img src="images/common/room_next.png" alt="다음" /></div>
+                </div>
+                <div class="swiper-container">
+                  <!-- data-* : data-index-special-list (property.facilities[] → 카드) -->
+                  <div class="swiper-wrapper" data-index-special-list></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div class="special_ico">
+              <!-- prettier-ignore -->
+              <div class="ico01" style="background:url('images/common/main_special_ico01.png') no-repeat 50%;background-size:auto 100%;">파란 비행기 아이콘</div>
+              <!-- ⚠️ 원본 `.ico02` / `.ico03`(구름)도 `url('')` 로 비어 있다. 싣지 않는다. -->
+            </div>
+          </div>
+          <!--// main_special -->
+
+          <!-- ── 마무리 밴드 ─────────────────────────────────
+               배경 사진 위 검은 막(50%) + 가운데 문구 + RESERVE NOW 버튼.
+               ⚠️ 문구에는 **전용 데이터 슬롯이 없다.** pages.index 블록 5개는
+                  위 다섯 섹션이 이미 다 쓴다. 원본 문구 자체가
+                  `Thank you for visit {영문 숙소명}` / `저희 {숙소명}에 오신 것을
+                  환영합니다.` 라 숙소명에서 유도한다(`data-property-caption`).
+               ⚠️ 원본은 `</section>` 을 이 블록 **안**에 닫아 둔다(마크업 오류).
+                  템플릿은 바로잡았다. -->
+          <div class="main_wide_bnr" data-index-closing-bg>
+            <div class="txt_box">
+              <strong
+                class="ff_jua"
+                data-aos="fade-up"
+                data-property-caption="Thank you for visit {nameEn}"
+              ></strong>
+              <p
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-property-caption="저희 {name}에 오신 것을 환영합니다."
+              ></p>
+              <div data-aos="fade-up" data-aos-delay="200">
+                <!-- data-* : data-booking-link (property.realtimeBookingId) -->
+                <a href="#!" target="_blank" data-booking-link>RESERVE NOW</a>
+              </div>
+            </div>
+            <!-- prettier-ignore -->
+            <div class="ico" style="background:url('images/common/main_wide_bg_ico.png') repeat-y 100% 100%;background-size:cover;"></div>
+          </div>
+          <!--// main_wide_bnr -->
+        </section>
+      </div>
+      <!--// container -->
+
+      <div id="footer-wrap"></div>
+    </div>
+
+    <div id="popup-container"></div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="js/image-helpers.js"></script>
+    <script src="js/preview-handler.js"></script>
+    <script src="js/data-mapper/core/base-mapper.js"></script>
+    <script src="js/data-mapper/pages/header-footer-mapper.js"></script>
+    <script src="js/data-mapper/pages/index-mapper.js"></script>
+    <script src="js/header-footer-loader.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/pages/index.js"></script>
+    <script src="js/popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,195 @@
+<header id="header" class="header">
+  <!-- 원본은 `.hd_cont` 안에 `.hd_inner` + `.btn_hd_res` + `.hd_lnb_bg` 를 나란히 담는다.
+       `.btn_hd_res`(예약 버튼)와 `.hd_lnb_bg`(서브메뉴 뒤 반투명 띠)는 둘 다
+       `.hd_inner` **밖**·`.hd_cont` 안이어야 원본 위치가 맞는다.
+
+       ⚠️ bomps 는 `.btn_hd_res` 를 **2개** 단다(둘째는 초록 `#5de97d` 네이버예약).
+          백오피스에는 `realtimeBookingId` 가 하나뿐이라 **1개만 싣는다.**
+          그래서 CSS 의 `.btn_hd_res + .btn_hd_res` 규칙도 가져오지 않았다. -->
+  <div class="hd_cont">
+    <div class="hd_inner">
+      <!-- 햄버거. PC 에서는 숨고 1023px 이하에서 좌측 absolute 로 들어온다. -->
+      <a href="#" class="btn_menu" aria-label="메뉴 열기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <!-- 원본 로고는 `<img>` 한 장이다.
+           템플릿은 로고 파일을 고정 저장하지 않는다.
+           ⚠️ 값이 없거나 URL 이 죽었으면 **이미지 placeholder** 를 세운다 —
+              숙소명 텍스트로 떨어뜨리지 않는다(슬롯이 채워진 것처럼 보이기 때문). -->
+      <div class="logo">
+        <a href="./index.html">
+          <img src="data:," alt="" data-logo-image />
+        </a>
+      </div>
+
+      <!-- ── PC 상단 메뉴 ──────────────────────────────────────
+           원본 대메뉴는 ABOUT / ROOMS / SPECIAL / RESERVE / TRAVEL / LOCATION 6개다.
+           ⚠️ `#hd_lnb` 에 마우스가 들어오면 **모든** `.depth_box` 가 한꺼번에 펼쳐지고
+              뒤에 `.hd_lnb_bg` 가 깔린다(항목별로 열리지 않는다). -->
+      <div class="hd_lnb" id="hd_lnb">
+        <ul>
+          <li class="depth1">
+            <a href="./main.html" class="depth1_a"><span>ABOUT</span></a>
+            <ul class="depth_box">
+              <li><a href="./main.html">펜션소개</a></li>
+            </ul>
+          </li>
+
+          <li class="depth1">
+            <!-- data-* : data-rooms-link (미리보기 켜짐 → layout-map.html / 꺼짐 → 첫 객실 상세) -->
+            <a href="./layout-map.html" class="depth1_a" data-rooms-link><span>ROOMS</span></a>
+            <!-- data-* : data-rooms-submenu (roomtypes[] → 미리보기 뒤에 동적 생성) -->
+            <ul class="depth_box" data-rooms-submenu>
+              <li><a href="./layout-map.html" data-menu-id="layout-map">미리보기</a></li>
+            </ul>
+          </li>
+
+          <!-- data-* : data-special-menu (facilities[] 가 비면 대메뉴째 숨김) -->
+          <li class="depth1" data-special-menu>
+            <a href="./facility.html" class="depth1_a"><span>SPECIAL</span></a>
+            <!-- data-* : data-special-submenu (property.facilities[].name 동적 생성) -->
+            <ul class="depth_box" data-special-submenu></ul>
+          </li>
+
+          <li class="depth1">
+            <!-- data-* : data-booking-link (property.realtimeBookingId) -->
+            <a href="#!" class="depth1_a" target="_blank" data-booking-link><span>RESERVE</span></a>
+            <ul class="depth_box">
+              <li><a href="#!" target="_blank" data-booking-link>예약하기</a></li>
+              <li><a href="./reservation.html">이용안내</a></li>
+            </ul>
+          </li>
+
+          <!-- data-* : data-travel-menu (nearbyAttractions.enabled=false 면 대메뉴째 숨김) -->
+          <li class="depth1" data-travel-menu>
+            <a href="./nearby-attractions.html" class="depth1_a"><span>TRAVEL</span></a>
+            <ul class="depth_box">
+              <li><a href="./nearby-attractions.html">주변여행지</a></li>
+            </ul>
+          </li>
+
+          <li class="depth1">
+            <a href="./directions.html" class="depth1_a"><span>LOCATION</span></a>
+            <ul class="depth_box">
+              <li><a href="./directions.html">오시는길</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!--// hd_inner -->
+
+    <!-- 네이버·인스타그램 버튼 (원본 jpension/bomps 헤더에는 없다 → 템플릿 구조 기준 위치)
+         PC(≥1024): 예약하기 박스 바로 왼쪽 / 480~1023: 햄버거 오른쪽 / 479px 이하: 헤더에서 숨기고 aside 맨 아래
+         data-* : data-homepage-socialLinks-blog (homepage.socialLinks.blog, 네이버 플레이스 주소)
+                  data-homepage-socialLinks-instagram (homepage.socialLinks.instagram)
+         값이 없으면 버튼째 숨긴다. 매핑 전 깜빡임 방지로 기본은 숨김 상태다. -->
+    <div class="hd_sns">
+      <a
+        href="#!"
+        class="btn_naver"
+        target="_blank"
+        rel="noopener"
+        aria-label="네이버"
+        style="display: none"
+        data-homepage-socialLinks-blog
+      >
+        <img src="images/n_logo.png" alt="" />
+      </a>
+      <a
+        href="#!"
+        class="btn_insta"
+        target="_blank"
+        rel="noopener"
+        aria-label="인스타그램"
+        style="display: none"
+        data-homepage-socialLinks-instagram
+      >
+        <img src="images/insta_logo.png" alt="" />
+      </a>
+    </div>
+
+    <!-- 실시간예약 버튼. 아이콘은 원본과 같이 `<span>` 배경이미지로 둔다. -->
+    <div class="btn_hd_res">
+      <!-- prettier-ignore -->
+      <a href="#!" target="_blank" data-booking-link><span style="background-image:url('images/common/ico_hd_reserve.png');">예약하기</span></a>
+    </div>
+
+    <div class="hd_lnb_bg"></div>
+  </div>
+
+  <!-- ── 모바일 사이드 메뉴 ────────────────────────────────
+       원본은 `.depth1`(제목 div) + `.depth_list`(항목 ul) 를 번갈아 늘어놓는 평면 구조다.
+       `<li>` 로 감싸지 않으며 제목을 누르면 `slideToggle` 로 열린다.
+       ⚠️ PC 와 **같은 `data-*`** 를 쓴다 — 매퍼가 `querySelectorAll` 로 둘 다 채운다. -->
+  <div class="aside">
+    <div class="aisde_inner">
+      <a href="#" class="btn_menu on" aria-label="메뉴 닫기">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <div class="aside_box">
+        <div class="depth1">ABOUT</div>
+        <ul class="depth_list">
+          <li><a href="./main.html">펜션소개</a></li>
+        </ul>
+
+        <div class="depth1">ROOMS</div>
+        <ul class="depth_list" data-rooms-submenu>
+          <li><a href="./layout-map.html" data-menu-id="layout-map">미리보기</a></li>
+        </ul>
+
+        <div class="depth1" data-special-menu>SPECIAL</div>
+        <ul class="depth_list" data-special-submenu data-special-menu></ul>
+
+        <div class="depth1">RESERVE</div>
+        <ul class="depth_list">
+          <li><a href="#!" target="_blank" data-booking-link>예약하기</a></li>
+          <li><a href="./reservation.html">이용안내</a></li>
+        </ul>
+
+        <div class="depth1" data-travel-menu>TRAVEL</div>
+        <ul class="depth_list" data-travel-menu>
+          <li><a href="./nearby-attractions.html">주변여행지</a></li>
+        </ul>
+
+        <div class="depth1">LOCATION</div>
+        <ul class="depth_list">
+          <li><a href="./directions.html">오시는길</a></li>
+        </ul>
+
+        <!-- 네이버·인스타그램 (479px 이하에서만 보인다 — 그 폭에서는 헤더 로고와 부딪쳐 여기로 옮긴다)
+             헤더 .hd_sns 와 같은 data-* 를 쓴다 — 매퍼가 querySelectorAll 로 둘 다 채운다. -->
+        <div class="aside_sns">
+          <a
+            href="#!"
+            class="btn_naver"
+            target="_blank"
+            rel="noopener"
+            aria-label="네이버"
+            style="display: none"
+            data-homepage-socialLinks-blog
+          >
+            <img src="images/n_logo.png" alt="" />
+          </a>
+          <a
+            href="#!"
+            class="btn_insta"
+            target="_blank"
+            rel="noopener"
+            aria-label="인스타그램"
+            style="display: none"
+            data-homepage-socialLinks-instagram
+          >
+            <img src="images/insta_logo.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// aside -->
+</header>

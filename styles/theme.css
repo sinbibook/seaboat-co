@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* Theme CSS — t-template-KIDS1
+   백오피스(js/preview-handler.js)가 덮어쓰는 토큰 5개.
+   배정 근거와 제약은 data-mapping.md 「테마 토큰」 참고. */
+
+:root {
+  /* 연한 배경 톤 — 객실 정보 표 */
+  --color-primary: #fafafa;
+
+  /* 브랜드 포인트(코랄) — 예약 버튼 / TOP 점선 / 소개 제목 / 오프셋 블록 / VIEW MORE / 요금표 상단선 */
+  --color-secondary: #f16b68;
+
+  /* 영문 제목 */
+  --font-en-main: 'Jua';
+
+  /* 한글 제목 — 원본은 한/영 제목 서체가 같다 */
+  --font-ko-main: 'Jua';
+
+  /* 한글 본문 — styles/reset.css 전역 서체 */
+  --font-ko-sub: 'Noto Sans KR';
+}

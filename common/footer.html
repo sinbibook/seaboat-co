@@ -1,0 +1,95 @@
+<div class="footer_wrap">
+  <div class="footer">
+    <!-- TOP 버튼. 점선 테두리(`:after`)가 `--color-secondary` 를 쓴다. -->
+    <a href="#" class="btn_top"><img src="images/common/ico_btn_top.png" alt="TOP" /></a>
+    <br />
+
+    <!-- 로고 칸. 헤더와 같다 — 없으면 이미지 placeholder.
+         ⚠️ jpension 은 `.ft_logo` 를 2개 단다(둘째는 「농어촌민박」 마크 이미지).
+            로고 칸은 1개만 싣고, 농어촌민박 마크는 아래 별도 줄
+            (customFields.footer.ruralStayMark)로 받는다. -->
+    <div class="ft_logo">
+      <a href="./index.html">
+        <img src="data:," alt="" data-logo-image />
+      </a>
+    </div>
+
+    <!-- data-* 속성 : data-footer-rural-stay-mark-wrap (customFields.footer.ruralStayMark 가 있을 때만 노출, 기본 숨김)
+         data-footer-rural-stay-mark : 농어촌민박사업자 이미지 (표시마크 + 신고번호, alt = description)
+         로고 아래, 전화번호 위에 가운데 정렬 독립 줄로 둔다. -->
+    <div class="ft_rural_stay_mark_wrap" data-footer-rural-stay-mark-wrap style="display: none">
+      <img
+        class="ft_rural_stay_mark"
+        src="data:,"
+        alt="농어촌민박사업자"
+        data-footer-rural-stay-mark
+      />
+    </div>
+
+    <!-- 전화번호. 아이콘은 원본과 같이 인라인 배경으로 둔다. -->
+    <!-- prettier-ignore -->
+    <div class="tel" style="background:url('images/common/ico_call.png') no-repeat 0 50%;"><a class="tpl-slot" href="tel:" data-footer-phone-link><span data-footer-phone></span></a></div>
+
+    <!-- 사업자 정보. 원본은 `<p>` 한 줄씩이다.
+         값이 없는 항목은 매퍼가 `<p>` 째 숨긴다(빈 줄만큼 여백이 생긴다). -->
+    <div class="address">
+      <p>
+        업체명 :
+        <span class="tpl-slot" data-footer-property-name></span>
+      </p>
+      <p>
+        주소 :
+        <span class="tpl-slot" data-footer-address></span>
+      </p>
+      <p>
+        대표자 :
+        <span class="tpl-slot" data-footer-representative></span>
+      </p>
+      <p>
+        사업자번호 :
+        <span class="tpl-slot" data-footer-business-number></span>
+      </p>
+      <!-- data-* : data-ybs-button (property.ybsId / 없으면 p 째 숨김)
+           ⚠️ 두 원본 모두 이 줄을 **주석 처리**해 뒀다(야놀자 YBS 링크).
+              백오피스에 `ybsId` 슬롯이 있으므로 살려 두고, 값이 없으면 숨긴다. -->
+      <p data-ybs-wrap>
+        <a class="tpl-slot" href="#!" target="_blank" data-ybs-button>야놀자 YBS</a>
+      </p>
+    </div>
+
+    <p class="copy">
+      <a href="http://trip11.kr/" target="_blank" data-copyright="COPYRIGHT©{provider}. ALL RIGHTS RESERVED.">COPYRIGHT©(주)트립일레븐. ALL RIGHTS RESERVED.</a>
+    </p>
+
+    <a href="http://design.trip11.net/privacy/privacy_policy.html" class="privacy" target="_blank">
+      개인정보처리방침
+    </a>
+  </div>
+
+  <!-- 푸터 배경. 원본은 PC/모바일 두 장을 겹쳐 두지만 **같은 파일**을 건다. -->
+  <!-- prettier-ignore -->
+  <div class="ft_bg for_pc" style="background:url('images/common/footer_bg.png') no-repeat center bottom;background-size:cover;"></div>
+  <!-- prettier-ignore -->
+  <div class="ft_bg for_m" style="background:url('images/common/footer_bg.png') no-repeat center bottom;background-size:cover;"></div>
+</div>
+
+<!-- 우측 하단 플로팅 버튼 2개. 상담하기(아래) + 예약하기(위) 순으로 쌓인다.
+     bomps 는 `#talk_custom_button` 을 인라인 style 로 고정 배치하는데,
+     템플릿은 `styles/style.css` 의 공통 규격을 쓴다. -->
+
+<!-- data-* : data-consult-button (property.tripPropertyId + partnerType)
+     상담 URL 은 `https://www.bookingplay.co.kr/api/cti_eicn/kakao_happy_talk?tid={tripPropertyId}` -->
+<div id="talk_custom_button" data-consult-wrap>
+  <a title="상담하기" href="#!" target="_blank" data-consult-button>
+    <img src="images/common/consult.png" alt="상담하기" />
+  </a>
+</div>
+
+<!-- data-* : data-booking-link (property.realtimeBookingId)
+     ⚠️ 원본은 `for_m` 인데도 **모든 폭에서** 보인다 — `.ft_btn_reserve.on` 이
+        `position:fixed` 를 덮어쓰기 때문이다. 원본 동작을 그대로 둔다. -->
+<div class="ft_btn_reserve for_m on">
+  <a title="예약하기" href="#!" target="_blank" data-booking-link>
+    <img src="images/common/talk.png" alt="예약하기" />
+  </a>
+</div>
