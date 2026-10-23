@@ -1301,6 +1301,16 @@ html[data-social='on'] .header .hd_sns {
   background: var(--color-secondary);
   display: inline-block;
   position: relative;
+  /* ⚠️ **호버 전에는 숨긴다.** 원본은 `.txt_box` 를 아래 81px 만 보이게 내려 두고
+     `strong` + 부제 `<p>` 높이로 버튼을 그 띠 밖으로 밀어낸다. 템플릿은 부제가 비면
+     `<p>` 를 만들지 않으므로 버튼이 띠 안으로 올라와 반쯤 잘린 채 보였다.
+     위치에 기대지 않고 hover 에서만 드러낸다. */
+  opacity: 0;
+  visibility: hidden;
+}
+.main_sld_list .swiper-slide:hover .txt_box .btn_more {
+  opacity: 1;
+  visibility: visible;
 }
 .main_sld_list .swiper-slide:hover .img_box {
   border-radius: 0;

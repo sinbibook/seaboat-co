@@ -205,15 +205,24 @@
   };
 
   // MAPPER: 시설 사진 → `.special_img` (2칸 고정)
+  //
+  // ⚠️ **시설 사진이 1장뿐이면 2칸을 통째로 뺀다.** 원본도 사진이 한 장인 시설
+  //    (바다배펜션 special11)은 `.special_img` 를 주석 처리하고 `.wide_img` 한 장만 둔다.
+  //    그대로 두면 같은 사진이 반쪽 칸 + 와이드로 두 번 나온다.
   FacilityMapper.prototype.mapGallery = function (facility) {
     var self = this;
     // 원본이 고른 2칸(special_gallery:N)이 1순위
     var marked = this.pickMarkedPhotos(facility && facility.images, 'special_gallery');
-    var images = marked.length ? marked : this.getFacilityImages(facility);
+    var pool = this.getFacilityImages(facility);
+    var images = marked.length ? marked : pool;
 
     var list = document.querySelector('[data-facility-gallery]');
     if (!list) return;
     list.innerHTML = '';
+
+    var single = images.length === 1;
+    if (list.parentNode) list.parentNode.style.display = single ? 'none' : '';
+    if (single) return;
 
     var cards = images.slice(0, GALLERY_COUNT);
     var count = cards.length || GALLERY_COUNT;
